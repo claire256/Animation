@@ -1,0 +1,135 @@
+body{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+.container{
+    position: relative;
+    width: 500px;
+    height: 400px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+     top: 150px; 
+}
+.container div{
+    width: 100px;
+    height: 400px;
+    /* animation-name: pur; */
+    animation-name: redy;
+    animation-name: yell;
+    animation-name: gry;
+    animation-name: blu;
+    animation-name: pin;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    /* transition-property:all; */
+    /* transform-origin: center 85%; */
+    position: absolute;
+    /* transition-duration: 3s;
+    transition-timing-function:ease */
+}
+.red{
+    background-color: red;
+    animation-name: redy;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    }
+.blue{
+    background-color: blue;
+    }
+.purple{
+    background-color:purple;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-name: pur;
+   }
+.gray{
+    background-color:gray;
+   }
+.yellow{
+    background-color:yellow;
+   }
+.pink{
+    background-color: pink;
+    }
+.purple::before{
+    background-color: white;
+    height: 20px;
+    width: 20px;
+    z-index: 6;
+    position: absolute;
+    content: "";
+    border-radius: 50%;
+    top: 90%;
+    left: 40%
+}
+/* .container:hover .purple{
+    transform:  rotate(70deg);
+    }
+.container:hover .red{
+    transform:  rotate(-70deg);
+   }
+.container:hover .gray{
+    transform:  rotate(15deg);
+    }
+.container:hover .yellow{
+    transform:  rotate(-15deg);
+    }
+.container:hover .pink{
+    transform:  rotate(45deg);
+    }
+.container:hover .blue{
+    transform:  rotate(-45deg);
+    } */
+@keyframes pur{
+   0%{
+       transform: rotate(0) translate(50px);
+   }
+   70%{
+    transform: rotate(70deg)
+   }
+
+}
+@keyframes gry{
+   0%{
+    transform: rotate(0) translateX(-50px)
+   }
+   15%{
+    transform: rotate(15deg)
+   }
+}
+@keyframes yell{
+   0%{
+    transform: rotate(0)
+   }
+   15%{
+    transform: rotate(-15deg)
+   }
+}
+@keyframes pin{
+    0%{
+        transform: rotate(0)
+    }
+    45%{
+        transform: rotate(45deg)
+    }
+}
+@keyframes blu{
+    15%{
+        transform: rotate(0)
+    }
+    45%{
+        transform: rotate(-45deg)
+    }
+}
+@keyframes redy{
+   0%{
+    transform: rotate(0)
+   }
+   70%{
+    transform: rotate(-70deg)
+   }
+}
